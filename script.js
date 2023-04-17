@@ -43,6 +43,10 @@
                 song_length: "Twenteen",
                 size: 12
             },
+            {
+              song_length: "Twenteen",
+              size: 25
+          },
         ]
         var dataValues = [];
         var dataLabels = [];
@@ -86,7 +90,7 @@
         return currentStreak > bestStreak ? currentElem : bestElem;
       };
       var data_q1= res.slice(0, res.length/2)
-      var data_q3 = res.slice(res.length/2 +1, res.length)
+      var data_q3 = res.slice(res.length/2 , res.length)
       var q1,q3;
       data_q1.sort(function(a, b){return a.size-b.size});
        if(data_q1.length%2==0){
