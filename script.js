@@ -7,6 +7,7 @@
   var q1_html = document.getElementById('q1');
   var q3_html = document.getElementById('q3');
   var outliers_html = document.getElementById('outliers');
+  var iqr_html=document.getElementById('iqr')
   function setHistogramma(){
     document.getElementById("histogram").remove();
     var histogram=document.createElement('canvas');
@@ -112,7 +113,7 @@
        median_html.innerHTML=`Median: ${median}`
        mean_html.innerHTML=`Mean: ${sum_of_data/res.length}`
        outliers_html.innerHTML=`Outliers: ${outliers}`
-        
+        iqr_html.innerHTML=`IQR: ${q3-q1}`
         res.forEach(res_data=>{
             dataValues.push(res_data.song_length)
             dataLabels.push(res_data.size)
